@@ -1,0 +1,227 @@
+        .custom-site-footer {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;           
+            background-color: #fff;
+            color: var(--background-color);
+            padding: 0;            
+        }
+
+        .custom-footer-row-1-outer {
+          display: flex;
+          justify-content: center;
+        }
+
+        .custom-footer-row-1 {
+          display: grid;
+          grid-auto-flow: column;
+          gap: 6rem;
+          width: 100%;
+          padding: 9rem 3rem;
+          @media screen and (max-width: 1024px) {
+          display: flex;
+          flex-direction: column;
+          padding: 6rem 3rem;
+         }
+        }
+
+.footer-first-block-with-email {
+  width: 100%;
+  max-width: 600px;
+}
+
+.custom-email-signup {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;         
+        }
+
+.custom-footer-block-1 {
+  width: auto;
+  @media screen and (max-width: 1024px) {
+            width: 100%;
+         }
+}
+
+        .custom-email-signup-paragraph {
+          max-width: 40rem; 
+          font-size: 16px; 
+          line-height: 20px; 
+          margin: 0; 
+          color: #fff;
+          @media screen and (max-width: 1024px) {
+          max-width: 100%;
+          }
+        }
+
+        .newsletter-form__field-wrapper {
+          width: 36rem;
+          max-width: 100%;
+          border: 1.5px solid var(--background-color);
+          @media screen and (max-width: 1024px) {
+          width: 100%;
+          }
+        }
+
+        .custom-social-media-icons {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;   
+        }
+
+.custom-social-media-icons a {
+  height: 4rem;
+  width: 4rem;
+  color: var(--background-color);
+}
+      
+.newsletter__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+        .custom-footer-block-heading {
+          font-size: 28px; 
+          line-height: 28px;
+          margin-bottom: 2rem;
+          margin-top: 0; 
+          font-weight: 600; 
+          color: var(--background-color);
+          letter-spacing: 0.4px;
+        }
+
+.custom-email-signup-heading {
+  font-family: league spartan;
+  font-size: 60px; 
+  line-height: 60px;
+  margin-top: 0;  
+  color: var(--background-color);
+  letter-spacing: 0;
+  @media screen and (max-width: 1024px) {
+    font-size: 50px; 
+  line-height: 50px;
+         }
+}
+
+        .custom-footer-block-list {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        .custom-footer-block-list-item {
+           font-size: 18px; 
+           line-height: 24px;
+           margin-bottom: 1rem;
+        }
+
+        .custom-footer-block-list-item-link {
+          color: var(--background-color);
+          text-decoration: none; 
+          transition: .2s;        
+        }
+
+        .custom-footer-block-list-item-link:hover {
+          opacity: 0.8;
+        }
+
+        .custom-footer-row-2-outer {
+          display: flex;
+          justify-content: center;
+          background-color: var(--background-color);
+          background-image: url(https://cdn.shopify.com/s/files/1/0280/1421/5257/files/footer_background.svg?v=1700667667);
+          background-size: cover;
+          background-position: bottom right;
+        }
+
+  .custom-footer-bottom-block-2 {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 6rem;
+    @media screen and (max-width: 1024px) {
+      gap: 1.5rem;
+          }
+  }
+
+   .footer-second-block-with-links {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     gap: 3rem;
+   }
+
+        .custom-footer-row-2 {
+          padding: 1rem 3rem;   
+          width: 100%;
+          @media screen and (max-width: 1024px) {
+  padding: 0;
+  }
+        }
+
+.custom-legal-list {
+  display: flex;
+  gap: 3rem;
+  @media screen and (max-width: 1024px) {
+  gap: 1.5rem;
+  }
+}
+
+.custom-legal-list-item {
+        display: flex;
+        font-size: 12px; 
+        line-height: 12px; 
+        font-weight: 700;
+        letter-spacing: 1.25px;
+        text-transform: uppercase; 
+}
+
+.custom-legal-list-item-link {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  transition: .2s;
+  text-decoration: none;
+}  
+
+.custom-policy-list-item {
+        font-size: 12px; 
+        line-height: 12px; 
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase; 
+        }
+
+.custom-policy-list-inner {
+  display: flex;
+  gap: 1rem;
+  @media screen and (max-width: 1024px) {
+  flex-direction: column;
+  align-items: center;
+  }
+}
+  
+.custom-policy-list-item-link {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  text-decoration: none;
+  transition: .2s;
+}
+
+.custom-policy-list-item-link:hover {
+          opacity: 0.8;
+        }
+
+.custom-copyright-policy-list-item {
+  display: flex;
+  gap: 3rem;
+  @media screen and (max-width: 1024px) {
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--background-color);
+  padding: 1rem 0 3rem;
+  }
+}
