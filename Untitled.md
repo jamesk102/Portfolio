@@ -1,3 +1,9 @@
+---
+layout: default
+title: Untitled2
+permalink: /untitled2/
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
