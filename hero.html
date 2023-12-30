@@ -380,21 +380,6 @@ overflow: hidden;
         overlay.style.pointerEvents = 'none';
         contentToDisableScroll.classList.remove('disable-scroll'); // Remove the class to enable scrolling
     });
-
-    function toggleAccordion(element) {
-    element.classList.toggle("custom-active");
-    var content = element.nextElementSibling;
-
-    if (content.style.maxHeight) {
-        // If the content is open, close it
-        content.style.maxHeight = null;
-        content.style.transition = null; // Remove transition to close smoothly
-    } else {
-        // If the content is closed, open it
-        content.style.maxHeight = content.scrollHeight + "px";
-        content.style.transition = "max-height 0.3s ease-out"; // Add transition for smooth opening
-    }
-}
   </script>
 
   <script>
