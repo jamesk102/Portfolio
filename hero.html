@@ -11,7 +11,11 @@ permalink: /hero
   <title>Your Portfolio</title>
   <style>
     header {
-      
+      display: grid;
+      grid-template-areas: 'navigation heading icons';
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      column-gap: 2rem;
       background-color: #000;
       color: white;
       padding: 1rem 3rem;
@@ -19,14 +23,9 @@ permalink: /hero
       position: sticky;
       top: 0;
       z-index: 100;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       @media (max-width: 600px) {       
-	display: grid;
         grid-template-areas: 'left-icons heading icons';
         grid-template-columns: 1fr 3.5fr 1fr;
-        align-items: center;
 	padding: 1rem 1.5rem;
       }
     }
