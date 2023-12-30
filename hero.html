@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Your Portfolio
-permalink: /hero/
+permalink: /hero
 ---
 
 <html>
@@ -9,14 +9,37 @@ permalink: /hero/
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Portfolio</title>
-  <style>
-    .markdown-body>*:first-child {
+  <style>   
+    /* Add this CSS for the hamburger menu */
+    .menu-icon {
       display: none;
+      cursor: pointer;
     }
-    
-    body {
-      margin: 0;
-      font-family: 'lato', sans-serif;
+
+    @media screen and (max-width: 600px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+      }
+
+      nav a {
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+        display: block;
+        color: white;
+        text-decoration: none;
+      }
+
+      .menu-icon {
+        display: block;
+      }
     }
 
     header {
@@ -27,6 +50,9 @@ permalink: /hero/
       position: sticky;
       top: 0;
       z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     main {
@@ -41,6 +67,11 @@ permalink: /hero/
       background-color: #333;
       color: white;
       text-align: center;
+    }
+
+    /* Markdown Style Override */
+    .markdown-body>*:first-child {
+      display: none;
     }
 
     .container-lg {
@@ -59,17 +90,27 @@ permalink: /hero/
 <body>
 
   <header>
+    <div>
+      <!-- Add your logo here -->
+      <img src="your-logo.png" alt="Your Logo" height="50">
+    </div>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
     <h1>Your Name</h1>
-    <p>Your Tagline or Brief Description</p>
   </header>
 
   <main>
-    <section>
+    <section id="about">
       <h2>About Me</h2>
-      <p>Write a brief tho tho tho introduction about yourself.</p>
+      <p>Write a brief introduction about yourself.</p>
     </section>
 
-    <section>
+    <section id="projects">
       <h2>Projects</h2>
       <div>
         <h3>Project 1</h3>
@@ -82,7 +123,7 @@ permalink: /hero/
       </div>
     </section>
 
-    <section>
+    <section id="skills">
       <h2>Skills</h2>
       <ul>
         <li>Skill 1</li>
@@ -91,15 +132,28 @@ permalink: /hero/
       </ul>
     </section>
 
-    <section>
+    <section id="contact">
       <h2>Contact</h2>
       <p>Provide contact information or a contact form.</p>
     </section>
   </main>
 
   <footer>
-    &copy; 2023 Your Portfolio. All rights reserved.
+    &copy; <span id="currentYear"></span> Your Portfolio. All rights reserved.
   </footer>
+
+  <!-- Add this script for toggling the mobile menu -->
+  <script>
+    function toggleMenu() {
+      var nav = document.querySelector('nav');
+      nav.style.display = (nav.style.display === 'none' || nav.style.display === '') ? 'flex' : 'none';
+    }
+  </script>
+
+  <!-- Add this script to dynamically update the year in the footer -->
+  <script>
+    document.getElementById("currentYear").innerText = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
