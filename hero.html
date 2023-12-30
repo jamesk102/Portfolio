@@ -14,6 +14,11 @@ permalink: /hero
     .menu-icon {
       display: none;
       cursor: pointer;
+      transition: transform 0.3s ease; /* Added transition property */
+    }
+
+    .menu-icon.open {
+      transform: rotate(45deg); /* Rotate the hamburger icon to form an X */
     }
 
     @media screen and (max-width: 600px) {
@@ -26,6 +31,12 @@ permalink: /hero
         left: 0;
         width: 100%;
         background-color: #333;
+        transition: transform 0.3s ease; /* Added transition property */
+        transform: translateY(-100%); /* Hide the menu off-screen initially */
+      }
+
+      nav.open {
+        transform: translateY(0); /* Slide the menu in view when open */
       }
 
       nav a {
@@ -146,7 +157,9 @@ permalink: /hero
   <script>
     function toggleMenu() {
       var nav = document.querySelector('nav');
-      nav.style.display = (nav.style.display === 'none' || nav.style.display === '') ? 'flex' : 'none';
+      nav.classList.toggle('open'); // Toggle the 'open' class to show/hide the menu
+      var icon = document.querySelector('.menu-icon');
+      icon.classList.toggle('open'); // Toggle the 'open' class for the X icon
     }
   </script>
 
@@ -157,3 +170,4 @@ permalink: /hero
 
 </body>
 </html>
+
