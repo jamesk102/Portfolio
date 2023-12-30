@@ -13,7 +13,7 @@ permalink: /hero
     header {
       background-color: #000;
       color: white;
-      padding: 15px;
+      padding: 1.5rem 3rem;
       text-align: center;
       position: sticky;
       top: 0;
@@ -21,6 +21,9 @@ permalink: /hero
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @media (max-width: 600px) {
+        padding: 1rem 1.5rem;
+      }
     }
 
     .desktop-menu-links {
@@ -35,11 +38,12 @@ permalink: /hero
     #desktop-links {
      text-transform: uppercase;
      font-family: 'Open Sans', sans-serif;
-     font-weight: 700;
+     font-weight: 400;
      letter-spacing: 1px;
      font-size: 14px;
      color: #fff;
      transition: 0.2s;
+     text-decoration: none;
     }
 
     #desktop-links:hover {
@@ -47,9 +51,12 @@ permalink: /hero
     }
 
     footer {
+      padding: 1rem;
       background-color: #000;
       color: white;
       text-align: center;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
     }
 
     /* Markdown Style Override */
@@ -249,7 +256,7 @@ permalink: /hero
   </main>
 
   <footer>
-    &copy; <span id="currentYear"></span> Your Portfolio. All rights reserved.
+    &copy; <span id="currentYear"></span> James Kissinger. All rights reserved.
   </footer>
 
   <script>
