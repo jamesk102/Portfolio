@@ -12,13 +12,23 @@ permalink: /hero
   <style>   
     /* Add this CSS for the hamburger menu */
     .menu-icon {
-      display: none;
+      display: block;
       cursor: pointer;
       transition: transform 0.3s ease; /* Added transition property */
     }
 
     .menu-icon.open {
       transform: rotate(45deg); /* Rotate the hamburger icon to form an X */
+    }
+
+    .close-icon {
+      display: none;
+      cursor: pointer;
+      transition: transform 0.3s ease; /* Added transition property */
+    }
+
+    .close-icon.open {
+      transform: rotate(45deg); /* Customize the "X" appearance if needed */
     }
 
     @media screen and (max-width: 600px) {
@@ -48,7 +58,11 @@ permalink: /hero
         text-decoration: none;
       }
 
-      .menu-icon {
+      .menu-icon.open {
+        display: none;
+      }
+
+      .close-icon {
         display: block;
       }
     }
@@ -106,6 +120,7 @@ permalink: /hero
       <img src="your-logo.png" alt="Your Logo" height="50">
     </div>
     <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="close-icon" onclick="toggleMenu()">✕</div>
     <nav>
       <a href="#about">About Me</a>
       <a href="#projects">Projects</a>
@@ -158,8 +173,10 @@ permalink: /hero
     function toggleMenu() {
       var nav = document.querySelector('nav');
       nav.classList.toggle('open'); // Toggle the 'open' class to show/hide the menu
-      var icon = document.querySelector('.menu-icon');
-      icon.classList.toggle('open'); // Toggle the 'open' class for the X icon
+      var menuIcon = document.querySelector('.menu-icon');
+      var closeIcon = document.querySelector('.close-icon');
+      menuIcon.classList.toggle('open'); // Toggle the 'open' class for the hamburger icon
+      closeIcon.classList.toggle('open'); // Toggle the 'open' class for the close icon
     }
   </script>
 
@@ -170,4 +187,3 @@ permalink: /hero
 
 </body>
 </html>
-
