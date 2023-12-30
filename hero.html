@@ -11,7 +11,7 @@ permalink: /hero
   <title>Your Portfolio</title>
   <style>
     header {
-      background-color: #333;
+      background-color: #000;
       color: white;
       padding: 15px;
       text-align: center;
@@ -32,17 +32,17 @@ permalink: /hero
      }
     }
 
+    #desktop-links {
+     text-transform: uppercase;
+    }
+
     footer {
-      background-color: #333;
+      background-color: #000;
       color: white;
       text-align: center;
     }
 
     /* Markdown Style Override */
-
-    .markdown-body {
-      border: none;
-    }
 	  
     .markdown-body>*:first-child {
       display: none;
@@ -62,21 +62,21 @@ permalink: /hero
 
     /* Menu Drawer Section */
 
-.custom-drawer-links {
+      .custom-drawer-links {
 	display: flex;
 	flex-direction: column;
 	gap: 1.5rem;
-font-family: inherit;
-margin-bottom: 3rem;
-  font-size: 22px;
-line-height: 26px;
-letter-spacing: 0;
-max-width: 500px;
-}
+        font-family: inherit;
+        margin-bottom: 3rem;
+        font-size: 22px;
+        line-height: 26px;
+        letter-spacing: 0;
+        max-width: 500px;
+       }
 
         .custom-drawer {
             position: fixed;
-       overflow: scroll;
+            overflow: scroll;
             top: 0;
             right: -40%;
             height: 100%;
@@ -85,19 +85,19 @@ max-width: 500px;
             box-shadow: none;
             transition: right 0.2s;
             z-index: 999;
-          @media (max-width: 768px) {
+            @media (max-width: 768px) {
             right: -80%;
             width: 80%;
         }
         }
 
-      .custom-drawer::-webkit-scrollbar {
-  display: none;
-}
+        .custom-drawer::-webkit-scrollbar {
+          display: none;
+        }
 
-.custom-drawer::-webkit-scrollbar-thumb {
-  background-color: transparent;
-}
+        .custom-drawer::-webkit-scrollbar-thumb {
+          background-color: transparent;
+        }
 
         .custom-drawer-header-outer {
           display: flex;
@@ -106,7 +106,7 @@ max-width: 500px;
         }
       
         .custom-drawer-header {
-            padding: 1.5rem 0;
+          padding: 1.5rem 0;
         }
 
         .custom-overlay {
@@ -138,7 +138,7 @@ max-width: 500px;
     background-color: transparent;
     text-decoration: none;
     @media (min-width: 601px) {
-  display: none;
+    display: none;
   }
         }
 
@@ -197,10 +197,10 @@ max-width: 500px;
     <div class="custom-overlay" id="custom-overlay"></div>
 
    <div class="desktop-menu-links">
-      <a href="#about">About Me</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+      <a href="#about" id="desktop-links">About Me</a>
+      <a href="#projects" id="desktop-links">Projects</a>
+      <a href="#skills" id="desktop-links">Skills</a>
+      <a href="#contact" id="desktop-links">Contact</a>
    </div>
   </header>
 
