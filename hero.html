@@ -17,16 +17,17 @@ permalink: /hero
         align-items: center;
         position: fixed;
         top: 0;
-        right: -100%;
+        right: -80vw;
         height: 100vh;
-        width: 80%;
+        width: 80vw;
         background-color: #333;
         z-index: 101;
-        transition: right 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(0);
       }
 
-      nav.show-menu {
-        right: 0;
+      nav.hidden {
+        transform: translateX(100%);
       }
 
       nav a {
@@ -171,7 +172,7 @@ permalink: /hero
   <script>
     function toggleMenu() {
       var nav = document.querySelector('nav');
-      nav.classList.toggle('show-menu');
+      nav.classList.toggle('hidden');
     }
   </script>
 
