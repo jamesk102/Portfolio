@@ -11,6 +11,7 @@ permalink: /hero
   <title>Your Portfolio</title>
   <style>
     header {
+      
       background-color: #000;
       color: white;
       padding: 1rem 3rem;
@@ -21,8 +22,12 @@ permalink: /hero
       display: flex;
       justify-content: space-between;
       align-items: center;
-      @media (max-width: 600px) {
-        padding: 1rem 1.5rem;
+      @media (max-width: 600px) {       
+	display: grid;
+        grid-template-areas: 'left-icons heading icons';
+        grid-template-columns: 1fr 3.5fr 1fr;
+        align-items: center;
+	padding: 1rem 1.5rem;
       }
     }
 
