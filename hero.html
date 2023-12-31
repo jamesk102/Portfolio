@@ -151,7 +151,7 @@ permalink: /hero
 	 gap: 2rem;
 	 padding: 3rem;
 	 height: 100%;
-	 background: linear-gradient(to bottom right, #fffacdfa, #add8e66e, #e6a8e624, #b4eeb429);
+	 background: linear-gradient(to bottom right, #fffacdfa, #add8e600, #e6a8e624, #b4eeb429);
        }
 
 	.custom-drawer-link {
@@ -208,7 +208,6 @@ permalink: /hero
         color: #fff;
         }
 
-
 /* Header Social Icons */
 
   .social-icons {
@@ -260,6 +259,63 @@ permalink: /hero
   box-shadow: 0 0 5px #fff;
   text-shadow: 0 0 5px #fff;
 }
+
+/* Drawer Links */
+
+#drawer-link-first {
+  display: flex;
+  flex-direction:column;
+  align-items: flex-start;
+  margin: 0 !important;
+  list-style: none;
+  height:100%; 
+  #drawer-link-second{
+    margin:0 20px;
+    position:relative;
+    #drawer-link-third{
+      text-decoration:none;
+      display:block;
+      padding:5px 0;
+      font-family:'Open Sans';
+      font-size:26px;
+      line-height:1;
+      font-weight:bold;
+      position:relative;
+      z-index:1;
+      text-align: center;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: linear-gradient(
+          to right,
+          gold,
+          gold 50%,
+          #000 50%);
+      background-size: 200% 100%;
+      background-position: -100%;
+      transition: all 0.3s ease-in-out;
+      &:before{
+        display:block;
+        content:'';
+        width:0;
+        height:3px;
+        bottom:5px;
+        left:0;
+        bottom:-3px;
+        z-index:0;
+        position:absolute;
+        background: gold;
+        transition: all 0.3s ease-in-out;
+      }
+      &:hover{
+        background-position: 0%;
+        &:before{
+          width:100%;
+        }
+      }
+    }
+  }
+}
+	  
   </style>
 </head>
 <body>
@@ -296,11 +352,16 @@ permalink: /hero
             </button> 		
         </div>             	     
 	<div class="custom-drawer-links">          
-          <a href="/email-marketing" class="custom-drawer-link">Email Marketing</a>
-          <a href="/social-media" class="custom-drawer-link">Social Media</a>
-          <a href="/packaging-design" class="custom-drawer-link">Packaging Design</a>
-          <a href="/web-design" class="custom-drawer-link">Web Design</a>  
-        </div>	
+          
+          <ul id="drawer-link-first">
+          <li id="drawer-link-second"><a href="/email-marketing" id="drawer-link-third">Email Marketing</a></li>
+          <li id="drawer-link-second"><a href="/social-media" id="drawer-link-third">Social Media Content</a></li>
+          <li id="drawer-link-second"><a href="/packaging-design" id="drawer-link-third">Packaging Design</a></li>
+	  <li id="drawer-link-second"><a href="/web-design" id="drawer-link-third">Web Design</a></li>
+	  <li id="drawer-link-second"><a href="/product-photography" id="drawer-link-third">Product Photography</a></li>
+          </ul>
+		
+        </div>
 	    </div>  
 	  
     <div class="custom-overlay" id="custom-overlay"></div>
