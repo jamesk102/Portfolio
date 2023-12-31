@@ -94,6 +94,8 @@ permalink: /hero
     /* Menu Drawer Section */
 
         .custom-drawer {
+	    display: flex;
+	    flex-direction: column;
             position: fixed;
             overflow: scroll;
             top: 0;
@@ -142,9 +144,11 @@ permalink: /hero
         }
 
 	.custom-drawer-links {
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;	
+	 display: flex;
+	 justify-content: center;
+	 flex-direction: column;
+	 gap: 2rem;	
+	 height: 100%;
        }
 
 	.custom-drawer-link {
