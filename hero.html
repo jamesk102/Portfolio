@@ -86,15 +86,18 @@ permalink: /hero
       .custom-drawer-links {
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 26px;
-        line-height: 26px;
-        letter-spacing: 0;
-        max-width: 500px;
-	text-decoration: none;
-	color: #000;
+	gap: 2rem;	
        }
+
+	.custom-drawer-link {
+         color: #000;
+	 font-weight: 400;
+	 font-family: 'Open Sans', sans-serif;
+	 font-size: 26px;
+         line-height: 26px;
+	 letter-spacing: 0;
+	 text-decoration: none;
+	}
 
         .custom-drawer {
             position: fixed;
@@ -277,10 +280,10 @@ permalink: /hero
             </button> 		
         </div>     
         <div class="custom-drawer-links">          
-      <a href="#about">About Me</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>  
+      <a href="#about" class="custom-drawer-link">About Me</a>
+      <a href="#projects" class="custom-drawer-link">Projects</a>
+      <a href="#skills" class="custom-drawer-link">Skills</a>
+      <a href="#contact" class="custom-drawer-link">Contact</a>  
         </div>	    
 </div>  
 	    </div>  
