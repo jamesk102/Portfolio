@@ -205,6 +205,42 @@
 .linkedin-icon:hover {
 	opacity: 0.8;
 }
+
+/* Resume */
+
+.resume-outer {
+   display: flex;
+}
+
+.resume-column-1 {
+   width: 30%;
+}
+
+.resume-column-1-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-headshot {
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.resume-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.resume-contact-item {
+  display: flex;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.resume-column-2 {
+  width: 70%;
+}
   </style>
 </head>
 <body>
@@ -232,10 +268,10 @@
     
         <div class="custom-drawer-header">
 	    <h1 class="custom-drawer-heading">
-             Portfolio
+              Portfolio
 	    </h1>
             <button id="custom-closeDrawer">
-		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 17l5-5-5-5M19.8 12H9M10 3H4v18h6"/></svg>
+	      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 17l5-5-5-5M19.8 12H9M10 3H4v18h6"/></svg>
             </button> 		
         </div>
 	    
@@ -265,19 +301,19 @@
       </div>
 
       <div class="resume-contact">
-      <p class="resume-phone">
+      <p class="resume-contact-item">
       <img src="jk-logo.svg" alt="Phone Icon">
       (407) 247-0575
       </p>
-      <p class="resume-email">
+      <p class="resume-contact-item">
       <img src="jk-logo.svg" alt="Email Icon">
       jamesrobertk21@gmail.com
       </p>
-      <p class="resume-website">
+      <p class="resume-contact-item">
       <img src="jk-logo.svg" alt="Web Icon">
       james-kissinger.com
       </p>
-      <p class="resume-location">
+      <p class="resume-contact-item">
       <img src="jk-logo.svg" alt="Location Icon">
       Orlando, FL
       </p>
