@@ -258,64 +258,7 @@ permalink: /hero
   color: #fff;
   box-shadow: 0 0 5px #fff;
   text-shadow: 0 0 5px #fff;
-}
-
-/* Drawer Links */
-
-#drawer-link-first {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2rem;
-  margin: 0 !important;
-  padding: 0 !important;
-  list-style: none;
-  height:100%; 
-  width: 100%;
-  #drawer-link-second{
-    margin:0;
-    position:relative;
-    #drawer-link-third{
-      text-decoration: none;
-      text-align: left;
-      display: block;
-      padding: 0;
-      font-weight: 400;
-      font-family: Futura PT Demi;
-      font-size: 26px;
-      line-height: 32px;
-      position:relative;
-      z-index:1;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-image: linear-gradient(to right,#edc967,#edc967 50%,#000 50%);
-      background-size: 200% 100%;
-      background-position: -100%;
-      transition: all 0.3s ease-in-out;
-      &:before{
-        display:block;
-        content:'';
-        width:0;
-        height:3px;
-        bottom:5px;
-        left:0;
-        bottom:-3px;
-        z-index:0;
-        position:absolute;
-        background: #edc967;
-        transition: all 0.3s ease-in-out;
-      }
-      &:hover{
-        background-position: 0%;
-        &:before{
-          width:100%;
-        }
-      }
-    }
-  }
-}
-	  
+}	  
   </style>
 </head>
 <body>
@@ -350,19 +293,17 @@ permalink: /hero
             <button id="custom-closeDrawer">
 		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 17l5-5-5-5M19.8 12H9M10 3H4v18h6"/></svg>
             </button> 		
-        </div>             	     
-	<div class="custom-drawer-links">          
-          
-          <ul id="drawer-link-first">
-          <li id="drawer-link-second"><a href="/email-marketing" id="drawer-link-third">Email Marketing</a></li>
-          <li id="drawer-link-second"><a href="/social-media" id="drawer-link-third">Social Media Content</a></li>
-          <li id="drawer-link-second"><a href="/packaging-design" id="drawer-link-third">Packaging Design</a></li>
-	  <li id="drawer-link-second"><a href="/web-design" id="drawer-link-third">Web Design</a></li>
-	  <li id="drawer-link-second"><a href="/product-photography" id="drawer-link-third">Product Photography</a></li>
-          </ul>
-		
         </div>
-	    </div>  
+	    
+	<div class="custom-drawer-links">                   
+          <a href="/email-marketing" class="custom-drawer-link">Email Marketing</a>
+          <a href="/social-media" class="custom-drawer-link">Social Media Content</a>
+          <a href="/packaging-design" class="custom-drawer-link">Packaging Design</a>
+	  <a href="/web-design" class="custom-drawer-link">Web Design</a>
+	  <a href="/product-photography" class="custom-drawer-link">Product Photography</a>		
+        </div>
+	    
+	</div>  
 	  
     <div class="custom-overlay" id="custom-overlay"></div>
 	  
