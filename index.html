@@ -253,7 +253,6 @@ permalink: /
 .resume-inner {
    display: flex;
    gap: 1.5rem;
-   padding: 1.5rem;
    max-width: 100%;
    width: 1000px;
    margin: 0 auto;
@@ -321,6 +320,20 @@ permalink: /
 
 .resume-column-2 {
   width: 70%;
+}
+
+.resume-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: #000;
+  color: #fff;
+}
+
+.resume-name-and-title {
+  display: flex;
+  flex-direction: column;
 }
 
 .resume-name {
@@ -461,12 +474,14 @@ permalink: /
     <div class="resume-column-2">
 
       <div class="resume-intro">
+      <div class="resume-name-and-title">
       <h1 class="resume-name">
       James Kissinger
       </h1>
       <p class="resume-title">
       Graphic Designer
       </p>
+      </div>
       <p class="resume-bio">
       A compassionate Family Wellness Counselor with a strong background in providing support and guidance to families facing various challenges. 
       </p>
