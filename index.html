@@ -217,6 +217,9 @@
    max-width: 1000px;
    margin: 0 auto;
    background-color: #fff;
+   @media (max-width: 600px) {
+   flex-direction: column;
+   }
 }
 
 .resume-column-1 {
@@ -255,6 +258,7 @@
   text-decoration: none;
   font-weight: 700; 
   font-size: 26px;
+  margin: 0;
 }
 
 .resume-bullet-point {
@@ -275,6 +279,10 @@
 
 .resume-column-2 {
   width: 70%;
+}
+
+.resume-name {
+  margin: 0;
 }
 
 .resume-title {
