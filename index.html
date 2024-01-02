@@ -284,12 +284,17 @@ permalink: /
 
 .resume-inner {
    display: flex;
+   flex-direction: column;
    max-width: 100%;
    width: 1100px;
    margin: 0 auto;
    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
    background-color: #fff;
-   @media (max-width: 600px) {
+}
+
+.resume-inner-columns {
+  display: flex;
+  @media (max-width: 600px) {
    flex-direction: column;
    }
 }
@@ -502,6 +507,7 @@ background-color: #000;
     </div>
 	    
     <div class="resume-inner">
+    <div class="resume-inner-columns">
     <div class="resume-column-1">
 	    
     <div class="resume-profile">	    
@@ -639,10 +645,11 @@ background-color: #000;
       </ul>
 	    
     </div>
-
-    <div class="resume-footer">
     </div>
 	    
+    <div class="resume-footer">
+    </div>
+
     </div>
     </div>
   </main>
