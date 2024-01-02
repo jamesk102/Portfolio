@@ -247,8 +247,36 @@ permalink: /
 /* Resume */
 
 .resume-outer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
   background: linear-gradient(to bottom right, #fffacdfa, #add8e600, #e6a8e624, #b4eeb429);
   padding: 6rem 0;
+}
+
+.resume-download-link {
+   max-width: 100%;
+   width: 1100px;
+}
+
+.resume-download-button {
+   padding: 1rem 1.5rem;
+   background-color: #000;
+   color: #fff;
+   text-decoration: none;
+   padding: 0;
+   margin: 0 !important;
+   font-family: Futura PT Demi;
+   text-transform: uppercase;
+   font-size: 16px !important;
+   line-height: 16px !important;
+   transition: 0.2s;
+   border: 2px solid #000;
+}
+
+.resume-download-button:hover {
+   background-color: transparent;
+   color: #000;
 }
 
 .resume-inner {
@@ -458,7 +486,13 @@ permalink: /
   <main>
 
     <div class="resume-outer">
-	  
+	    
+    <div class="resume-download-link">
+      <a href="path/to/your/file.zip" download="yourFileName.zip" class="resume-download-button">
+        Download Resume
+      </a>
+    </div>
+	    
     <div class="resume-inner">
     <div class="resume-column-1">
 	    
