@@ -247,8 +247,8 @@ permalink: /email-marketing
  .email-marketing-outer {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  background: linear-gradient(to bottom right, #f0f0f06b, #e0e0e026, #d0d0d0, #add8e645, #87ceeb73, #ffffff);
+  gap: 3rem;
+  background: linear-gradient(to bottom right, #fffacdfa, #add8e600, #e6a8e624, #b4eeb429);
  }
 
  .email-marketing-header {
@@ -270,15 +270,23 @@ permalink: /email-marketing
  }
 
  .email-marketing-portfolio {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
  }
 
 .email-marketing-portfolio-column-1 {
-   width: 50%;
+   width: auto;
 }
 
 .email-marketing-portfolio-column-2 {
-   width: 50%;
+   width: auto;
+}
+
+.email-marketing-portfolio-column-3 {
+   width: auto;
 }
   </style>
 </head>
@@ -342,6 +350,10 @@ permalink: /email-marketing
     </div>
 
     <div class="email-marketing-portfolio-column-2">
+     <img src="images/new-scents-email.jpg" alt="New Scents Email">
+    </div>
+
+    <div class="email-marketing-portfolio-column-3">
      <img src="images/new-scents-email.jpg" alt="New Scents Email">
     </div>
 	    
