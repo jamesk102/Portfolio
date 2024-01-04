@@ -389,6 +389,16 @@ permalink: /
     padding: 0.4rem 0.6rem;
     border-radius: 30px;
     background-color: #ede2d9;
+    @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.resume-date-mobile {
+   display: flex;
+   @media (min-width: 1025px) {
+   display: none;
+}
 }
 
 .resume-skills {
@@ -610,6 +620,11 @@ background-color: #000;
       <p class="resume-bullet-point" style="display: flex; align-items: center; font-size: 20px; line-height: 20px;">
       <b>Florida State University</b>     
       </p>
+      <p class="resume-graduation-date">
+      May 2020    
+      </p>
+      </div>
+      <div class="resume-date-mobile">
       <p class="resume-graduation-date">
       May 2020    
       </p>
