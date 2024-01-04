@@ -1,0 +1,772 @@
+---
+layout: default
+title: James Kissinger
+permalink: /email-marketing
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.svg">
+  <title>Email Marketing</title>
+  <style>
+    body {
+     margin: 0;
+     font-family: 'Open Sans', sans-serif;
+    }
+	  
+    header {
+      display: grid;
+      grid-template-areas: 'navigation heading icons';
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      column-gap: 2rem;
+      background-color: #000;
+      color: white;
+      padding: 1rem 3rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      @media (max-width: 600px) {       
+        grid-template-areas: 'left-icons heading icons';
+        grid-template-columns: 1fr 3.5fr 1fr;
+	padding: 1rem 1.5rem;
+      }
+    }
+
+    @font-face {
+    font-family: "Albra Bold-Traced-Web";
+    src: url("https://db.onlinewebfonts.com/t/7d9c063eb108c1bf637da824e27d97e8.eot");
+    src: url("https://db.onlinewebfonts.com/t/7d9c063eb108c1bf637da824e27d97e8.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/7d9c063eb108c1bf637da824e27d97e8.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/7d9c063eb108c1bf637da824e27d97e8.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/7d9c063eb108c1bf637da824e27d97e8.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/7d9c063eb108c1bf637da824e27d97e8.svg#Albra Bold-Traced-Web")format("svg");
+}
+
+ @font-face {
+    font-family: "Futura PT Demi";
+    src: url("https://db.onlinewebfonts.com/t/5bdac91b83b25ea168302ffbc40909de.eot");
+    src: url("https://db.onlinewebfonts.com/t/5bdac91b83b25ea168302ffbc40909de.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/5bdac91b83b25ea168302ffbc40909de.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/5bdac91b83b25ea168302ffbc40909de.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/5bdac91b83b25ea168302ffbc40909de.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/5bdac91b83b25ea168302ffbc40909de.svg#Futura PT Demi")format("svg");
+}
+
+    .james-logo {
+	display: flex;
+	justify-content: center;
+        height: 3rem;
+    }
+
+    #desktop-links:hover {
+     opacity: 0.8;
+    }
+
+    footer {
+      padding: 0.5rem;
+      background-color: #000;
+      color: white;
+      text-align: center;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+    }
+	  
+    /* Markdown Style Override */
+
+    .markdown-body img {
+      background-color: transparent;
+    }
+	  
+    .markdown-body>*:first-child {
+      display: none;
+    }
+
+    .container-lg {
+      max-width: none;
+    }
+
+    .px-3 {
+      padding: 0 !important;
+    }
+
+    .my-5 {
+      margin: 0 !important;
+    }
+
+    /* Menu Drawer Section */
+
+        .custom-drawer {
+	    display: flex;
+	    flex-direction: column;
+            position: fixed;
+            overflow: scroll;
+            top: 0;
+            right: -30%;
+            height: 100%;
+            width: 30%;
+            background: #fff;
+            box-shadow: none;
+            transition: right 0.2s;
+            z-index: 999;
+            @media (max-width: 768px) {
+            right: -80%;
+            width: 80%;
+        }
+        }
+
+        .custom-drawer::-webkit-scrollbar {
+          display: none;
+        }
+
+        .custom-drawer::-webkit-scrollbar-thumb {
+          background-color: transparent;
+        }
+
+	.custom-drawer-heading {
+	  display: flex;
+	  align-items: center;
+          margin: 0 !important;
+	  padding: 0 !important;
+	  font-family: Futura PT Demi;
+	  text-transform: uppercase;
+	  font-size: 22px !important;
+	  line-height: 22px !important;
+	  color: #fff;
+	  border: none !important;
+	}
+      
+        .custom-drawer-header {
+	  display: flex;
+	  justify-content: space-between;
+          padding: 0 3rem;
+	  background: #000;
+	  @media (max-width: 600px) {       
+	  padding: 0 1.5rem;
+          }
+        }
+
+	.custom-drawer-links {
+	 display: flex;
+	 justify-content: center;
+	 align-items: flex-start;
+	 flex-direction: column;
+	 gap: 2rem;
+	 padding: 3rem;
+	 height: 100%;
+	 background: linear-gradient(to bottom right, #fffacdfa, #add8e600, #e6a8e624, #b4eeb429);
+       }
+
+	.custom-drawer-link {
+         color: #000;
+	 font-weight: 400;
+	 font-family: Futura PT Demi;
+	 font-size: 26px;
+         line-height: 26px;
+	 text-align: left;
+	 text-decoration: none;
+	 transition: 0.2s;
+	}
+
+	.custom-drawer-link:hover {
+	 text-decoration: none;
+	 opacity: 0.8;
+	}
+
+        .custom-overlay {
+            position: fixed;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            pointer-events: none;
+            background-color: #0006;          
+            z-index: 3;
+	}
+
+        .disable-scroll {
+            overflow: hidden;
+        }
+
+        #custom-openDrawer {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    text-decoration: none;
+    box-shadow: none;
+    transition: 0.2s;
+        }
+
+	#custom-openDrawer:hover {
+		opacity: 0.8;
+	}
+
+        #custom-closeDrawer {
+        display: flex;
+	align-items: center;
+        height: 5rem;
+        border: none;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        background-color: transparent;
+        color: #fff;
+        }
+
+/* Header Social Icons */
+
+  .linkedin-icon {
+  display: flex;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-decoration: none;
+  transition: 0.2s;  
+}	  
+
+.linkedin-icon:hover {
+	opacity: 0.8;
+}
+
+/* Resume */
+
+.resume-outer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: linear-gradient(to bottom right, #fffacdfa, #add8e600, #e6a8e624, #b4eeb429);
+  padding: 6rem 0;
+}
+
+.resume-download-link {
+   display: flex;
+    max-width: 100%;
+    width: 1100px;
+    margin: 0 auto;
+    justify-content: flex-start;
+}
+
+.resume-download-button {
+   padding: 1rem 1.5rem;
+   background-color: #000;
+   color: #fff;
+   text-decoration: none;
+   margin: 0 !important;
+   font-family: Futura PT Demi;
+   text-transform: uppercase;
+   font-size: 16px !important;
+   line-height: 16px !important;
+   transition: 0.2s;
+   border: 2px solid #000;
+}
+
+.resume-download-button:hover {
+   background-color: transparent;
+   color: #000;
+   text-decoration: none;
+}
+
+.resume-inner {
+   display: flex;
+   flex-direction: column;
+   max-width: 100%;
+   width: 1100px;
+   margin: 0 auto;
+   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+   background-color: #fff;
+}
+
+.resume-inner-columns {
+  display: flex;
+  @media (max-width: 600px) {
+   flex-direction: column;
+   }
+}
+
+.resume-column-1 {
+   width: 40%;
+}
+
+.resume-profile {
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+  background-color: #EBD6F2;
+  padding: 3rem 3rem 3rem 4.5rem;
+}
+	  
+.resume-headshot {
+  display: flex;
+  justify-content: center;
+}
+
+.resume-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.resume-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  padding: 0;
+  margin: 0 !important;
+  font-family: Futura PT Demi;
+  text-transform: uppercase;
+  font-size: 16px !important;
+  line-height: 16px !important;
+  transition: 0.2s;
+  color: #000;
+}
+
+.resume-contact-item:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.resume-contact-icon {
+  width: 30px;
+}
+
+.resume-sub-heading {
+    text-decoration: none;
+    font-weight: 700 !important;
+    font-size: 26px !important;
+    line-height: 26px !important;
+    border: none !important;
+    margin: 0 !important;
+    padding-bottom: 1rem !important;
+    border-bottom: 2px solid #000 !important;
+}
+
+.resume-bullet-point {
+  padding: 0;
+    margin: 0 !important;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+}
+	  
+.resume-education {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    padding: 3rem 3rem 0 4.5rem;
+}
+
+.resume-graduation-date {
+  display: flex;
+  align-items: center;
+    text-decoration: none;
+    margin: 0 !important;
+    font-family: Futura PT Demi;
+    text-transform: uppercase;
+    font-size: 14px !important;
+    line-height: 14px !important;
+    padding: 0.4rem 0.6rem;
+    border-radius: 30px;
+    background-color: #ede2d9;
+}
+
+.resume-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 3rem 3rem 3rem 4.5rem !important;
+    margin: 0 !important;
+}
+
+.resume-platforms {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0rem 3rem 3rem 4.5rem !important;
+    margin: 0 !important;
+}
+
+.resume-column-2 {
+  width: 60%;
+}
+
+.resume-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 3rem 4.5rem 3rem 3rem;
+  background-color: #000;
+  color: #fff;
+}
+
+.resume-name-and-title {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 1.5rem;
+}
+
+.resume-name {
+    border: none !important;
+    font-family: Albra Bold-Traced-Web;
+    font-size: 60px !important;
+    line-height: 60px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.resume-title {
+    margin: 0 !important;
+    padding: 0;
+    font-family: Futura PT Demi;
+    text-transform: uppercase;
+    font-size: 22px !important;
+    line-height: 22px !important;
+}
+
+.resume-bio {
+   font-family: 'Open Sans', sans-serif;
+   font-size: 20px;
+   margin: 0 !important;
+}
+
+.resume-professional-summary {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    margin: 0 !important;
+    padding: 3rem 4.5rem 0 3rem !important;
+}
+
+.resume-experience {
+   display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    margin: 0 !important;
+    padding: 3rem 4.5rem 3rem 3rem !important;
+}
+	  
+.resume-footer {
+height: 60px;
+background-color: #000;
+}
+  </style>
+</head>
+<body>
+
+<header>
+<a href="https://www.linkedin.com/in/jamesk102" target="_blank" class="linkedin-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" class="bi bi-linkedin" viewBox="0 0 16 16">
+    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4"/>
+  </svg>    
+</a>
+	  
+<div class="james-logo">
+	    <a href="/" class="james-logo">
+      <img src="jk-logo.svg" alt="JK Logo">
+	   </a>
+    </div>
+	  
+<button id="custom-openDrawer">
+	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+  
+    <div class="custom-drawer" id="custom-myDrawer">     
+    
+        <div class="custom-drawer-header">
+	    <h1 class="custom-drawer-heading">
+              Portfolio
+	    </h1>
+            <button id="custom-closeDrawer">
+	      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 17l5-5-5-5M19.8 12H9M10 3H4v18h6"/></svg>
+            </button> 		
+        </div>
+	    
+	<div class="custom-drawer-links">                   
+          <a href="/email-marketing" class="custom-drawer-link">Email Marketing</a>
+          <a href="/social-media" class="custom-drawer-link">Social Media Content</a>
+          <a href="/packaging-design" class="custom-drawer-link">Packaging Design</a>
+	  <a href="/web-design" class="custom-drawer-link">Web Design</a>
+	  <a href="/product-photography" class="custom-drawer-link">Product Photography</a>		
+        </div>
+	    
+	</div>  
+	  
+    <div class="custom-overlay" id="custom-overlay"></div>
+	  
+  </header>
+
+  <main>
+
+    <div class="resume-outer">
+	    
+    <div class="resume-download-link">
+      <a href="James Kissinger Resume 2024.pdf" download="James Kissinger Resume 2024.pdf" class="resume-download-button">
+        Download Resume
+      </a>
+    </div>
+	    
+    <div class="resume-inner">
+    <div class="resume-inner-columns">
+    <div class="resume-column-1">
+	    
+    <div class="resume-profile">	    
+      <div class="resume-headshot">
+      <img src="jim.jpeg" alt="James Headshot" style="width: 100%; border-radius: 50%; border: 2px solid #fff;">
+      </div>
+      <div class="resume-contact">
+      <p class="resume-contact-item">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      (407) 247-0575
+      </p>
+      <p class="resume-contact-item">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+      <a href="mailto:jamesrobertk21@gmail.com" class="resume-contact-item">jamesrobertk21@gmail.com</a>
+      </p>
+      <p class="resume-contact-item">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z"/></svg>
+      Orlando, FL
+      </p>
+      <p class="resume-contact-item">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+      <a href="https://james-kissinger.com" class="resume-contact-item">james-kissinger.com</a>
+      </p>
+      </div>
+    </div>
+
+    <div class="resume-education">
+      <h1 class="resume-sub-heading">
+      Education     
+      </h1>   
+      <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+      <div style="display: flex; justify-content: space-between;">
+      <p class="resume-bullet-point" style="display: flex; align-items: center; font-size: 20px; line-height: 20px;">
+      <b>Florida State University</b>     
+      </p>
+      <p class="resume-graduation-date">
+      May 2020    
+      </p>
+      </div>
+      <p class="resume-bullet-point">
+      Bachelor of Science, Finance and Marketing   
+      </p>
+      </div>
+      </div>
+
+    <ul class="resume-skills">
+      <h1 class="resume-sub-heading">
+      Skills     
+      </h1>
+      <div style="display: flex; flex-direction: column; gap: 0.5rem; padding: 0 1rem;">
+      <li class="resume-bullet-point">
+      Website Coding, Design, & Copywriting
+      </li>
+      <li class="resume-bullet-point">
+      Email Campaign Design
+      </li>
+      <li class="resume-bullet-point">
+      Logo, Banner, & Print Design
+      </li>
+      <li class="resume-bullet-point">
+      Social Media Content
+      </li>
+      <li class="resume-bullet-point">
+      Product Photography
+      </li>
+      <li class="resume-bullet-point">
+      Product Development
+      </li>  
+      </div>
+    </ul>
+
+    <ul class="resume-platforms">
+      <h1 class="resume-sub-heading">
+      Platforms     
+      </h1>
+      <div style="display: flex; flex-direction: column; gap: 0.5rem; padding: 0 1rem;">
+      <li class="resume-bullet-point">
+      HTML, CSS, JavaScript
+      </li>
+      <li class="resume-bullet-point">
+      Shopify
+      </li>
+      <li class="resume-bullet-point">
+      Klaviyo, Mailchimp
+      </li>
+      <li class="resume-bullet-point">
+      Canva
+      </li>
+      <li class="resume-bullet-point">
+      GitHub
+      </li> 
+      </div>
+    </ul>
+
+    </div>
+
+    <div class="resume-column-2">
+
+      <div class="resume-intro">
+      <div class="resume-name-and-title">
+      <h1 class="resume-name">
+      James Kissinger
+      </h1>
+      <p class="resume-title">
+      Digital Designer
+      </p>
+      </div>
+      <p class="resume-bio">
+      Driven digital designer operating a direct-to-consumer wellness brand. Known for meticulous attention to detail. Consistently growing graphic design skills through content creation and website development. Proven creative leader who brings ideas to life and exceeds expectations.
+      </p>
+      </div>
+
+      <ul class="resume-professional-summary">
+      <h1 class="resume-sub-heading">
+      Professional Summary     
+      </h1>
+      <div style="display: flex; flex-direction: column; gap: 0.5rem; padding: 0 1rem;">
+      <li class="resume-bullet-point">
+      Over 3 years of digital design experience with emphasis on responsive web design and converting landing pages
+      </li>
+      <li class="resume-bullet-point">
+      Sole proprietor of consumer packaged goods brand wearing all hats of brand design and content creation
+      </li>
+      </div>
+      </ul>
+
+      <ul class="resume-experience">
+      <h1 class="resume-sub-heading">
+      Experience     
+      </h1>
+
+      <div style="display: flex; flex-direction: column; gap: 3rem;"> 
+	      
+      <div style="display: flex; flex-direction: column; gap: 1rem;">  
+      <div style="display: flex; flex-direction: column; gap: 0.5rem">      
+      <div style="display: flex; justify-content: space-between;">
+      <p class="resume-bullet-point" style="display: flex; align-items: center; font-size: 20px; line-height: 20px;">
+      <b>Blur Laundry</b>, Orlando, FL     
+      </p>
+      <p class="resume-graduation-date">
+      May 2020 - Present   
+      </p>
+      </div>
+      <p class="resume-bullet-point" style="display: flex; align-items: center; font-size: 20px; line-height: 20px;">
+      <b><i>Chief Executive Officer and Founder</i></b>    
+      </p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 0.5rem; padding: 0 1rem;">
+      <li class="resume-bullet-point">
+      Build a cohesive brand profile and create consistent content across marketing channels
+      </li>
+      <li class="resume-bullet-point">
+      Develop custom Shopify website from scratch using HTML, CSS, and JavaScript
+      </li>
+      <li class="resume-bullet-point">
+      Photograph and edit all photo and video content for website and social platforms
+      </li>
+      <li class="resume-bullet-point">
+      Write copy for all website, social media posts, email campaigns, and other marketing channels
+      </li>
+      <li class="resume-bullet-point">
+      Build and maintain engaged communities across social platforms (@blurlaundry) through influencer campaigns, brand collaborations, and organic interactions with customers
+      </li>      
+      </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 1rem;">
+      <div style="display: flex; flex-direction: column; gap: 0.5rem">      
+      <div style="display: flex; justify-content: space-between;">
+      <p class="resume-bullet-point" style="display: flex; align-items: center; font-size: 20px; line-height: 20px;">
+      <b>Downs & St. Germain</b>, Tallahassee, FL     
+      </p>
+      <p class="resume-graduation-date">
+      May 2018 - Aug 2018   
+      </p>
+      </div>
+      <p class="resume-bullet-point" style="display: flex; align-items: center; font-size: 20px; line-height: 20px;">
+      <b><i>Market Research Intern</i></b>    
+      </p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 0.5rem; padding: 0 1rem;">
+      <li class="resume-bullet-point">
+      Prepare visitor tracking and economic impact reports in Microsoft PowerPoint for various tourism destinations
+      </li>
+      <li class="resume-bullet-point">
+      Turn focus groups and survey reports into action documents establishing a basis for marketing campaigns 
+      </li>
+      <li class="resume-bullet-point">
+      Collaborate with the project director and company president conceptualizing research project ideas
+      </li>
+      </div>
+      </div>
+
+      </div>
+      </ul>
+	    
+    </div>
+    </div>
+	    
+    <div class="resume-footer">
+    </div>
+
+    </div>
+    </div>
+  </main>
+	
+  <footer>
+    &copy; <span id="currentYear"></span> James Kissinger
+  </footer>
+
+  <script>
+    const openDrawerButton = document.getElementById('custom-openDrawer');
+    const closeDrawerButton = document.getElementById('custom-closeDrawer');
+    const myDrawer = document.getElementById('custom-myDrawer');
+    const overlay = document.getElementById('custom-overlay');
+    const contentToDisableScroll = document.body; // Change this to the specific content you want to disable scrolling for
+
+    openDrawerButton.addEventListener('click', () => {
+            myDrawer.style.right = '0';
+            overlay.style.opacity = 1;
+            overlay.style.pointerEvents = 'auto';
+            contentToDisableScroll.classList.add('disable-scroll'); // Add a class to disable scrolling
+        });
+
+    closeDrawerButton.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+            myDrawer.style.right = '-80%'; // Adjust to -80% for screens narrower than 768px
+        } else {
+            myDrawer.style.right = '-30%'; // Adjust to -30% for screens wider than 768px
+        }
+        overlay.style.opacity = 0;
+        overlay.style.pointerEvents = 'none';
+        contentToDisableScroll.classList.remove('disable-scroll'); // Remove the class to enable scrolling
+    });
+
+    overlay.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+            myDrawer.style.right = '-80%'; // Adjust to -80% for screens narrower than 768px
+        } else {
+            myDrawer.style.right = '-30%'; // Adjust to -30% for screens wider than 768px
+        }
+        overlay.style.opacity = 0;
+        overlay.style.pointerEvents = 'none';
+        contentToDisableScroll.classList.remove('disable-scroll'); // Remove the class to enable scrolling
+    });
+  </script>
+
+  <script>
+    document.getElementById("currentYear").innerText = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
