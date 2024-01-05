@@ -242,7 +242,7 @@ permalink: /social-media-content
 	opacity: 0.8;
 }
 
-/* Social Media Content Header */
+/* Social Media Content Portfolio */
 
  .social-media-content-outer {
   display: flex;
@@ -292,9 +292,10 @@ permalink: /social-media-content
   line-height: 16px !important;
   margin: 0 !important;
   padding-bottom: 20px !important;
+  @media (max-width: 1000px) {
+  text-align: center;
+  }
 }
-
-/* Social Media Content Portfolio Header */
 
 .social-media-content-blur-laundry-header {
 display: flex;
@@ -309,12 +310,14 @@ display: flex;
 
  .social-media-content-blur-laundry-header-logo {
     display: flex;
+    flex-decoration: column;
     align-items: center;
     justify-content: center;
     width: 30%;
     @media (max-width: 1000px) {
     width: 100%;
     justify-content: flex-start;
+    flex-direction: row;
     }
  }
 
@@ -376,8 +379,6 @@ display: flex;
     font-weight: 600;
     color: #00376C;
 }
-	  
-/* Social Media Content Portfolio */
 
  .social-media-content-blur-laundry {
    margin: 0 auto;
@@ -405,9 +406,6 @@ display: flex;
   height: 300px;
   width: 100%;
   background-color: #3498db;
-  @media (max-width: 1000px) {
-  height: 400px;
-  }
 }
 
 .social-media-content-icon {
@@ -453,6 +451,16 @@ display: flex;
 .social-media-content-grid-item:hover .social-media-content-overlay {
       opacity: 1;
     }
+
+.title-and-see-more {
+  display: flex; 
+  align-items: center; 
+  gap: 28px; 
+  margin-bottom: 28px;
+  @media (max-width: 1000px) {
+  flex-direction: column;
+  }
+}
   </style>
 </head>
 <body>
@@ -516,9 +524,7 @@ display: flex;
     <div class="social-media-content-blur-laundry-header">
     <div class="social-media-content-blur-laundry-header-logo">
     <img src="images/blur-logo.jpeg" alt="Blur Logo" class="social-media-content-blur-laundry-header-logo-image">
-    </div>
-    <div class="social-media-content-blur-laundry-header-brand-info" style="display: flex; flex-direction: column;">
-    <div style="display: flex; align-items: center; gap: 28px; margin-bottom: 28px;">
+    <div class="title-and-see-more">
     <h1 class="social-media-content-blur-laundry-header-brand-name">
     blurlaundry
     </h1>
@@ -526,6 +532,8 @@ display: flex;
     See More
     </a>
     </div>
+    </div>
+    <div class="social-media-content-blur-laundry-header-brand-info" style="display: flex; flex-direction: column;">
     <div style="display: flex; align-items: center; gap: 40px;">
     <p class="social-media-content-blur-laundry-header-brand-followers">
     <b>134</b> posts
