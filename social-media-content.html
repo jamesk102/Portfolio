@@ -289,21 +289,26 @@ permalink: /social-media-content
 
 /* Social Media Content Portfolio */
 
- .grid-container {
+ .social-media-content-blur-laundry {
+   margin: 0 auto;
+    max-width: 1000px;
+ }
+
+ .social-media-content-grid-container {
   display: grid;
   grid-template-columns: repeat(3, 300px);
   grid-gap: 10px;
   justify-content: center;
 }
 
-.grid-item {
+.social-media-content-grid-item {
   position: relative;
-  height: 320px;
+  height: 300px;
   width: 100%;
   background-color: #3498db;
 }
 
-.icon {
+.social-media-content-icon {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -317,7 +322,7 @@ permalink: /social-media-content
       object-fit: cover;
 }
 
-.content {
+.social-media-content-content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -340,7 +345,7 @@ permalink: /social-media-content
       transition: opacity 0.3s ease;
 }
 
-.grid-item:hover .social-media-content-overlay {
+.social-media-content-grid-item:hover .social-media-content-overlay {
       opacity: 1;
     }
   </style>
@@ -401,31 +406,31 @@ permalink: /social-media-content
     </p>
     </div>
 	
-    <div class="social-media-content-portfolio">
+    <div class="social-media-content-blur-laundry">
 
-      <div class="grid-container">
+    <div class="social-media-content-grid-container">
 	      
-    <div class="grid-item">
-      <div class="icon">&#x2602;</div>
+    <div class="social-media-content-grid-item">
+      <div class="social-media-content-icon">&#x2602;</div>
       <img src="/ig-posts/well-being.jpg" alt="Image 1" class="social-media-content-image">
       <div class="social-media-content-overlay">
-      <div class="content">Your Text Here</div>
+      <div class="social-media-content-content">Your Text Here</div>
       </div>
     </div>
 	      
-    <div class="grid-item">
-      <div class="icon">&#x2602;</div>
+    <div class="social-media-content-grid-item">
+      <div class="social-media-content-icon">&#x2602;</div>
       <img src="/ig-posts/well-being.jpg" alt="Image 1" class="social-media-content-image">
       <div class="social-media-content-overlay">
-      <div class="content">Your Text Here</div>
+      <div class="social-media-content-content">Your Text Here</div>
       </div>
     </div>
 	      
-    <div class="grid-item">
-      <div class="icon">&#x2602;</div>
+    <div class="social-media-content-grid-item">
+      <div class="social-media-content-icon">&#x2602;</div>
       <img src="/ig-posts/well-being.jpg" alt="Image 1" class="social-media-content-image">
       <div class="social-media-content-overlay">
-      <div class="content">Your Text Here</div>
+      <div class="social-media-content-content">Your Text Here</div>
       </div>
     </div>
 	      
