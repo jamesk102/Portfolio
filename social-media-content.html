@@ -298,44 +298,78 @@ permalink: /social-media-content
     }
  }
 
-.social-media-content-portfolio-column-1 {
-   display: flex;
-   flex-direction: column;
-   gap: 3rem;
-}
-
-.social-media-content-portfolio-column-2 {
-   display: flex;
-   flex-direction: column;
-   gap: 3rem;
-}
-
-.social-media-content-portfolio-column-3 {
-   display: flex;
-   flex-direction: column;
-   gap: 3rem;
-}
 
 /* Social Media Content Portfolio */
 
-.social-media-content-container {
-   display: flex;
-   width: 100%;
-   padding-top: 100%;
-}
 
-  .social-media-content-svg-container {
-    position: absolute;
-      top: 0;
-      right: 0;
-      width: 24px;
-      height: 24px;
-  }
+/* Container styles */
+    .social-media-content-container {
+      position: relative;
+      width: calc(33.33% - 20px);
+      margin: 10px;
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: top;
+      cursor: pointer;
+      background-color: pink;
+    }
 
-  .social-media-content-svg-container svg {
+    /* Image styles */
+    .social-media-content-image {
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
+
+    /* Overlay styles */
+    .social-media-content-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    /* Text styles inside overlay */
+    .social-media-content-overlay-text {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    /* Icon styles inside overlay */
+    .social-media-content-overlay-icons {
+      display: flex;
+      align-items: center;
+    }
+
+    /* Heart icon styles */
+    .social-media-content-like-icon {
+      margin-right: 5px;
+      color: #ff0000;
+    }
+
+    /* Smile icon styles */
+    .social-media-content-smile-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #ffd700;
+      font-size: 24px;
+    }
+
+    /* Container hover effect */
+    .social-media-content-container:hover .social-media-content-overlay {
+      opacity: 1;
+    }
+ 
   </style>
 </head>
 <body>
@@ -403,9 +437,20 @@ permalink: /social-media-content
     </div>
 
     <div class="social-media-content-portfolio-column-2">
-      <div style="display: flex; flex-direction: column;">
-      <img src="images/new-scents-email.jpg" alt="New Scents Email">
-      </div>
+
+      <div class="social-media-content-container" id="social-media-content-1">
+  <span class="social-media-content-smile-icon">😊</span>
+  <img src="image1.jpg" alt="Image 1" class="social-media-content-image">
+  <div class="social-media-content-overlay">
+    <div class="social-media-content-overlay-text">
+      <span class="social-media-content-like-icon">❤</span> Likes: 100
+    </div>
+    <div class="social-media-content-overlay-icons">
+      <span class="social-media-content-comment-icon">💬</span> Comments: 50
+    </div>
+  </div>
+</div>
+	    
     </div>
 
     <div class="social-media-content-portfolio-column-3">
