@@ -291,23 +291,23 @@ permalink: /social-media-content
 
  .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 100px); /* Adjust the size as needed */
-  grid-gap: 10px; /* Adjust the gap between squares as needed */
+  grid-template-columns: repeat(3, 300px);
+  grid-gap: 10px;
 }
 
 .grid-item {
   position: relative;
   width: 100%;
-  padding-top: 100%; /* Maintain a 1:1 aspect ratio for square containers */
-  background-color: #3498db; /* Adjust the background color as needed */
+  padding-top: 100%;
+  background-color: #3498db;
 }
 
 .icon {
   position: absolute;
-  top: 5px; /* Adjust the top position for the icon */
-  right: 5px; /* Adjust the right position for the icon */
-  font-size: 20px; /* Adjust the font size of the icon */
-  color: white; /* Adjust the icon color */
+  top: 5px;
+  right: 5px;
+  font-size: 20px; 
+  color: white; 
 }
 
 .content {
@@ -315,8 +315,27 @@ permalink: /social-media-content
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white; /* Adjust the text color as needed */
+  color: white;
 }
+
+.social-media-content-overlay {
+   position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+}
+
+.grid-item:hover .social-media-content-overlay {
+      opacity: 1;
+    }
   </style>
 </head>
 <body>
@@ -380,15 +399,21 @@ permalink: /social-media-content
       <div class="grid-container">
     <div class="grid-item">
       <div class="icon">&#x2602;</div>
+      <div class="social-media-content-overlay">
       <div class="content">Your Text Here</div>
+      </div>
     </div>
     <div class="grid-item">
       <div class="icon">&#x2602;</div>
+      <div class="social-media-content-overlay">
       <div class="content">Your Text Here</div>
+      </div>
     </div>
     <div class="grid-item">
       <div class="icon">&#x2602;</div>
+      <div class="social-media-content-overlay">
       <div class="content">Your Text Here</div>
+      </div>
     </div>
     <!-- Repeat for other grid items -->
      </div>
