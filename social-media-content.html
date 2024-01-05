@@ -454,11 +454,22 @@ display: flex;
 
 .title-and-see-more {
   display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  gap: 18px; 
+  margin-bottom: 28px;
+  @media (min-width: 1000px) {
+  display: none;
+  }
+}
+
+.title-and-see-more-2 {
+  display: flex; 
   align-items: center; 
   gap: 28px; 
   margin-bottom: 28px;
   @media (max-width: 1000px) {
-  flex-direction: column;
+  display: none;
   }
 }
   </style>
@@ -534,6 +545,14 @@ display: flex;
     </div>
     </div>
     <div class="social-media-content-blur-laundry-header-brand-info" style="display: flex; flex-direction: column;">
+    <div class="title-and-see-more-2">
+    <h1 class="social-media-content-blur-laundry-header-brand-name">
+    blurlaundry
+    </h1>
+    <a href="https://www.instagram.com/blurlaundry/" target="_blank" class="social-media-content-blur-laundry-header-brand-button">
+    See More
+    </a>
+    </div>
     <div style="display: flex; align-items: center; gap: 40px;">
     <p class="social-media-content-blur-laundry-header-brand-followers">
     <b>134</b> posts
