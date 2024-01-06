@@ -106,15 +106,15 @@ permalink: /truly-beauty
             position: fixed;
             overflow: scroll;
             top: 0;
-            right: -30%;
+            left: -30%;
             height: 100%;
             width: 30%;
             background: #fff;
             box-shadow: none;
-            transition: right 0.2s;
+            transition: left 0.2s;
             z-index: 999;
             @media (max-width: 768px) {
-            right: -80%;
+            left: -80%;
             width: 80%;
         }
         }
@@ -253,39 +253,7 @@ permalink: /truly-beauty
   @media (max-width: 1000px) {
   padding: 3rem 1.5rem;
  }
- }
-
- .email-marketing-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    max-width: 100%;
-    width: 1000px;
-    margin: 0 auto;
-    gap: 1rem;
-    border-bottom: 2px solid #000;
-    padding-bottom: 1.5rem;
- }
-	  
- .email-marketing-heading {
-    border: none !important;
-    font-family: Albra Bold-Traced-Web;
-    font-size: 60px !important;
-    line-height: 60px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    color: #000;
- }
-
-.email-marketing-sub-heading {
-   margin: 0 !important;
-    padding: 0;
-    font-family: Futura PT Demi;
-    text-transform: uppercase;
-    font-size: 22px !important;
-    line-height: 22px !important;
-    color: #000;
-}
+ }	
 
  .email-marketing-portfolio {
     display: grid;
@@ -355,45 +323,15 @@ permalink: /truly-beauty
 
   <main>
     <div class="email-marketing-outer">
-
-    <div class="email-marketing-header">
-    <h1 class="email-marketing-heading">
-    Email Marketing
-    </h1>
-    <p class="email-marketing-sub-heading">
-    klaviyo • shopify mail
-    </p>
-    </div>
 	
     <div class="email-marketing-portfolio">
 	    
     <div class="email-marketing-portfolio-column-1">
-      <div style="display: flex; flex-direction: column;">
-      <img src="images/cyber-monday-email.jpg" alt="Cyber Monday Email">
-      </div>
-      <div style="display: flex; flex-direction: column;">
-      <img src="images/clean-routine-email-top.jpg" alt="Clean Routine Email Top" style="border-bottom: 1px solid #162345;">
-      <img src="images/clean-routine-email.gif" alt="Clean Routine Email Gif">
-      <img src="images/clean-routine-email-bottom.jpg" alt="Clean Routine Email Bottom">
-      </div>
-      <div style="display: flex; flex-direction: column;">
-      <img src="images/relaunch-email-graphic.jpg" alt="Relaunch Email Graphic">
-      </div>
+      
     </div>
 
     <div class="email-marketing-portfolio-column-2">
-     <div style="display: flex; flex-direction: column;">
-      <img src="images/new-scents-email.jpg" alt="New Scents Email">
-      </div>
-      <div style="display: flex; flex-direction: column;">
-      <img src="images/sale-email-graphic.jpg" alt="Sale Email Graphic">
-      </div>
-      <div style="display: flex; flex-direction: column;">
-      <img src="images/black-friday-email-graphic.jpg" alt="Black Friday Email Graphic">
-      </div>
-      <div style="display: flex; flex-direction: column;">
-      <img src="images/sale-ending-email-graphic.jpg" alt="Sale Ending Email Graphic">
-      </div>
+	    
     </div>
 	    
     </div>
@@ -413,7 +351,7 @@ permalink: /truly-beauty
     const contentToDisableScroll = document.body; // Change this to the specific content you want to disable scrolling for
 
     openDrawerButton.addEventListener('click', () => {
-            myDrawer.style.right = '0';
+            myDrawer.style.left = '0';
             overlay.style.opacity = 1;
             overlay.style.pointerEvents = 'auto';
             contentToDisableScroll.classList.add('disable-scroll'); // Add a class to disable scrolling
@@ -421,9 +359,9 @@ permalink: /truly-beauty
 
     closeDrawerButton.addEventListener('click', () => {
         if (window.innerWidth <= 768) {
-            myDrawer.style.right = '-80%'; // Adjust to -80% for screens narrower than 768px
+            myDrawer.style.left = '-80%'; // Adjust to -80% for screens narrower than 768px
         } else {
-            myDrawer.style.right = '-30%'; // Adjust to -30% for screens wider than 768px
+            myDrawer.style.left = '-30%'; // Adjust to -30% for screens wider than 768px
         }
         overlay.style.opacity = 0;
         overlay.style.pointerEvents = 'none';
@@ -432,9 +370,9 @@ permalink: /truly-beauty
 
     overlay.addEventListener('click', () => {
         if (window.innerWidth <= 768) {
-            myDrawer.style.right = '-80%'; // Adjust to -80% for screens narrower than 768px
+            myDrawer.style.left = '-80%'; // Adjust to -80% for screens narrower than 768px
         } else {
-            myDrawer.style.right = '-30%'; // Adjust to -30% for screens wider than 768px
+            myDrawer.style.left = '-30%'; // Adjust to -30% for screens wider than 768px
         }
         overlay.style.opacity = 0;
         overlay.style.pointerEvents = 'none';
